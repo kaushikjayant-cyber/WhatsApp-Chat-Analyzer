@@ -86,7 +86,7 @@ def emoji_helper(selected_user, df):
     for message in df['message']:
 
         for ch in message:
-            if ch in emoji.UNICODE_EMOJI['en']:
+            if emoji.is_emoji(ch):
                 emojis.append(ch)
 
     # Now it's safe to use Counter
